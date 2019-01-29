@@ -1,0 +1,6 @@
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH";
+
+# Setup global pointer for default ansible vault password file
+export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass.txt
+
