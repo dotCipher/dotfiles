@@ -4,3 +4,12 @@ export PATH="$HOME/bin:$PATH";
 # Setup global pointer for default ansible vault password file
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass.txt
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+
+# Docker
+export DOCKER_HOST=tcp://localhost:2375
+
+# SDK Man (must be at EoF to work)
+export SDKMAN_DIR="/home/cmoore/.sdkman"
+
