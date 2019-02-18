@@ -7,9 +7,12 @@ export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass.txt
 # NVM
 export NVM_DIR="$HOME/.nvm"
 
+# Jabba
+export JABBA_HOME="$HOME/.jabba"
+
 # Docker
 export DOCKER_HOST=tcp://localhost:2375
 
 # SDK Man (must be at EoF to work)
-export SDKMAN_DIR="/home/cmoore/.sdkman"
+export SDKMAN_DIR="$HOME/.sdkman"
 
