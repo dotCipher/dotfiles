@@ -1,0 +1,6 @@
+alias c "clear"
+alias gw "./gradlew"
+alias g "git"
+alias gaa "git add ."
+alias gcm "git commit -m "
+alias clone "git clone"

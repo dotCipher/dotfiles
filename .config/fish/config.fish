@@ -7,6 +7,9 @@ set -g fish_user_paths "/usr/local/bin" $fish_user_paths
 # Setup secure environment variable sourcing
 [ -f ~/.config/fish/secure_env.fish ]; and source ~/.config/fish/secure_env.fish
 
+# Setup fish aliases
+[ -f ~/.config/fish/aliases.fish ]; and source ~/.config/fish/aliases.fish
+
 # Editor
 set -gx EDITOR /usr/bin/vim
 
