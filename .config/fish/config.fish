@@ -17,10 +17,10 @@ set -gx EDITOR /usr/bin/vim
 eval (direnv hook fish)
 
 # GoLang
-#set -x GOPATH $HOME/Workspace/Go
-#set -x GOROOT /usr/local/opt/go/libexec
-#set -x PATH $PATH $GOROOT/bin
-#set -x PATH $PATH $GOPATH/bin
+set -x GOPATH $HOME/Workspace/Go
+set -x GOROOT /usr/local/opt/go/libexec
+set -x PATH $PATH $GOROOT/bin
+set -x PATH $PATH $GOPATH/bin
 
 # Docker
 set -gx DOCKER_HOST "tcp://localhost:2375"

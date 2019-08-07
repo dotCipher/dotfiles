@@ -16,3 +16,6 @@ export DOCKER_HOST=tcp://localhost:2375
 # SDK Man (must be at EoF to work)
 export SDKMAN_DIR="$HOME/.sdkman"
 
+# Go
+export GOPATH="$HOME/Workspace/Go"
+export PATH="$PATH:$GOPATH/bin"
