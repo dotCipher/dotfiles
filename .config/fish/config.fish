@@ -17,8 +17,17 @@ set -gx EDITOR /usr/bin/vim
 eval (direnv hook fish)
 
 # GoLang
-set -x GOPATH $HOME/Workspace/Go
-set -x GOROOT /usr/local/opt/go/libexec
+if test -e "/mnt/c/Users/"(whoami)"/"
+	# In WSL
+	mkdir -p "/mnt/c/Users/"(whoami)"/Workspace/Go"
+	set -gx GOPATH "/mnt/c/Users/"(whoami)"/Workspace/Go"
+	mkdir -p /usr/local/go
+	set -gx GOROOT /usr/local/go
+else
+	# In OSX / Unix
+	set -gx GOPATH $HOME/Workspace/Go
+	set -gx GOROOT /usr/local/opt/go/libexec
+end
 set -x PATH $PATH $GOROOT/bin
 set -x PATH $PATH $GOPATH/bin
 
@@ -45,13 +54,3 @@ else if test -e "/mnt/c/Users/"(whoami)"/.jabba/jabba.fish"
 	source $JABBA_HOME/jabba.fish
 end
 
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /mnt/c/Users/cmoore/Workspace/Repos/BloomCredit/AccountStore/node_modules/tabtab/.completions/serverless.fish ]; and . /mnt/c/Users/cmoore/Workspace/Repos/BloomCredit/AccountStore/node_modules/tabtab/.completions/serverless.fish
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /mnt/c/Users/cmoore/Workspace/Repos/BloomCredit/AccountStore/node_modules/tabtab/.completions/sls.fish ]; and . /mnt/c/Users/cmoore/Workspace/Repos/BloomCredit/AccountStore/node_modules/tabtab/.completions/sls.fish
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /mnt/c/Users/cmoore/Workspace/Repos/BloomCredit/AccountStore/node_modules/tabtab/.completions/slss.fish ]; and . /mnt/c/Users/cmoore/Workspace/Repos/BloomCredit/AccountStore/node_modules/tabtab/.completions/slss.fish
