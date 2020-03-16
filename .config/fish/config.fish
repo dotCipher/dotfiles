@@ -54,3 +54,4 @@ else if test -e "/mnt/c/Users/"(whoami)"/.jabba/jabba.fish"
 	source $JABBA_HOME/jabba.fish
 end
 
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
