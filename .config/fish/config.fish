@@ -31,9 +31,6 @@ end
 set -x PATH $PATH $GOROOT/bin
 set -x PATH $PATH $GOPATH/bin
 
-# Docker
-set -gx DOCKER_HOST "tcp://localhost:2375"
-
 # Ansible Environment
 set ANSIBLE_VAULT_PASSWORD_FILE $HOME/.ansible/.vault_pass.txt
 

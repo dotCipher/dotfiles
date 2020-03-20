@@ -1,10 +1,12 @@
 [user]
 	email = cody@bloomcred.it
 	name = Cody Moore
-	signingkey = 48DBB745C7124837
+	signingkey = 5369D474
 [commit]
 	gpgsign = true
 #[gpg]
 #	program = gpg
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[gpg]
+	program = gpg
