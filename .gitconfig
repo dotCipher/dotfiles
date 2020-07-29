@@ -10,3 +10,7 @@
 	insteadOf = https://github.com/
 [gpg]
 	program = gpg
+[diff "sopsdiffer"]
+	textconv = sops -d
+[pull]
+	rebase = false

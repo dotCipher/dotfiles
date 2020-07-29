@@ -11,5 +11,11 @@ alias gp "git push"
 alias gpo "git push -u origin (git branch | grep \* | cut -d ' ' -f2)"
 alias clone "git clone"
 
-alias nexus-port-forward "kubectl1.8 config set-context (kubectl1.8 config current-context) --namespace=utility; kubectl1.8 port-forward (kubectl1.8 -n utility get pods -l app=sonatype-nexus -o go-template --template '{{range .items}}{{.metadata.name}}{{\"\n\"}}{{end}}' | head -n1) 8080:8081"
+alias k "kubectl"
+alias kctx "kubectx"
 
+alias aws "set -x AWS_VAULT; aws-vault exec \$AWS_DEFAULT_PROFILE -- /usr/local/bin/aws $argv"
+alias avl "set -x AWS_VAULT; aws-vault login $argv"
+alias ave "set -x AWS_VAULT; aws-vault exec $argv"
+alias exa "exa --icons"
+alias ls "exa --icons"
