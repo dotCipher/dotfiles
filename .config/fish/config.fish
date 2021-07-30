@@ -3,6 +3,9 @@ set -g fish_user_paths "/usr/local/bin" $fish_user_paths
 # Direnv
 eval (direnv hook fish)
 
+# Zoxide
+zoxide init fish | source
+
 # Setup secure environment variable sourcing
 [ -f $HOME/.config/fish/secure_env.fish ]; and source $HOME/.config/fish/secure_env.fish
 
