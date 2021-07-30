@@ -3,10 +3,6 @@ set -g fish_user_paths "/usr/local/bin" $fish_user_paths
 # Direnv
 eval (direnv hook fish)
 
-# https://github.com/wting/autojump#installation
-# After brew install autojump
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
-
 # Setup secure environment variable sourcing
 [ -f $HOME/.config/fish/secure_env.fish ]; and source $HOME/.config/fish/secure_env.fish
 
