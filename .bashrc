@@ -2,3 +2,5 @@
 
 # This file shouldn't have anything else in it, since I organize my bash settings into other files
 #  (see ~/.bash_profile , ~/.bash_env , etc)
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
