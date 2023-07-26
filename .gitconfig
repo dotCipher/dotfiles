@@ -1,5 +1,5 @@
 [user]
-	email = cody@bloomcred.it
+	email = cody.moore101@gmail.com
 	name = Cody Moore
 	signingkey = 5369D474
 [commit]
@@ -10,7 +10,7 @@
 	insteadOf = https://github.com/
 [gpg]
 	program = gpg
-[diff "sopsdiffer"]
-	textconv = sops -d
 [pull]
 	rebase = false
+[core]
+    editor = vim
