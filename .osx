@@ -66,6 +66,12 @@ osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/S
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
+# Trackpad: Tap to left-click (0 = false, 1 = true)
+defaults write com.apple.mouse.tapBehavior -int 1
+
+# Trackpad: Natural Scrolling direction (0 = false, 1 = true)
+defaults write com.apple.swipescrolldirection -int 0
+
 # Trackpad: Haptic feedback (light, silent clicking)
 defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
 defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
