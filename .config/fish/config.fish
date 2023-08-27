@@ -1,7 +1,5 @@
-set -g fish_user_paths "/usr/local/bin" $fish_user_paths
-
-# Direnv
-eval (direnv hook fish)
+# Set homebrew path for fish
+fish_add_path /opt/homebrew/bin
 
 # Zoxide
 zoxide init fish | source
@@ -15,9 +13,6 @@ zoxide init fish | source
 # Editor
 set -gx EDITOR /usr/bin/vim
 
-# DirEnv
-eval (direnv hook fish)
-
 # GoLang
 if test -e "/mnt/c/Users/"(whoami)"/"
 	# In WSL
@@ -28,7 +23,7 @@ if test -e "/mnt/c/Users/"(whoami)"/"
 else
 	# In OSX / Unix
 	set -gx GOPATH $HOME/Workspace/Go
-	set -gx GOROOT /usr/local/opt/go/libexec
+	set -gx GOROOT (brew --prefix golang)/libexec
 end
 set -x PATH $PATH $GOROOT/bin
 set -x PATH $PATH $GOPATH/bin

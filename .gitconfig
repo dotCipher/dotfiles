@@ -1,7 +1,7 @@
 [user]
 	email = cody.moore101@gmail.com
 	name = Cody Moore
-	signingkey = 5369D474
+	signingkey = 0254475B40C5B2F9
 [commit]
 	gpgsign = true
 #[gpg]
@@ -14,3 +14,5 @@
 	rebase = false
 [core]
     editor = vim
+[push]
+	autoSetupRemote = true
