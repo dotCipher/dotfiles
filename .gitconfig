@@ -1,7 +1,7 @@
 [user]
 	email = cody.moore101@gmail.com
 	name = Cody Moore
-	signingkey = 0254475B40C5B2F9
+	signingkey = F26A1BB18388A51E
 [commit]
 	gpgsign = true
 #[gpg]
@@ -14,5 +14,12 @@
 	rebase = false
 [core]
     editor = vim
+	excludesFile = ~/.gitignore
 [push]
 	autoSetupRemote = true
+	default = current
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

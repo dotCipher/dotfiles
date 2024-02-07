@@ -4,6 +4,9 @@ fish_add_path /opt/homebrew/bin
 # Zoxide
 zoxide init fish | source
 
+# Setup local cli secrets
+[ -f $HOME/.config/fish/secrets.fish ]; and source $HOME/.config/fish/secrets.fish
+
 # Setup secure environment variable sourcing
 [ -f $HOME/.config/fish/secure_env.fish ]; and source $HOME/.config/fish/secure_env.fish
 
