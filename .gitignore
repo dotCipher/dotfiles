@@ -1,5 +1,23 @@
 **/secrets.fish
 
+# Ignore specific .gnupg sub-dirs
+.gnupg/crls.d/
+.gnupg/openpgp-revocs.d/
+.gnupg/private-keys-v1.d/
+.gnupg/random_seed
+.gnupg/pubring*
+.gnupg/reader_0.status
+.gnupg/trustdb.gpg
+
+# Ignore yarn
+.config/yarn/
+
+# Ignore go telemetry
+.config/go/
+
+# Ignore diesel_cli
+.config/diesel_cli/
+
 # Created by https://www.toptal.com/developers/gitignore/api/osx,visualstudiocode,goland,intellij+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=osx,visualstudiocode,goland,intellij+all
 
@@ -181,7 +199,8 @@ fabric.properties
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*

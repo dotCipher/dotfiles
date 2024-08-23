@@ -1,1 +1,0 @@
-{"binaries":["diesel"],"binary_aliases":{},"install_prefix":"/Users/codymoore/.cargo/bin","provider":{"source":"cargo-dist","version":"0.14.1"},"source":{"app_name":"diesel_cli","name":"diesel","owner":"diesel-rs","release_type":"github"},"version":"2.2.1"}
