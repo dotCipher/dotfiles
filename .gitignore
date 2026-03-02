@@ -17,9 +17,6 @@
 # Ignore go telemetry
 .config/go/
 
-# Ignore diesel_cli
-.config/diesel_cli/
-
 # Ignore runtime / auto-generated config dirs
 .config/cagent/
 .config/configstore/
@@ -63,47 +60,6 @@
 .config/fish/functions/proxy-test.fish
 .config/fish/functions/proxycurl.fish
 
-### JetBrains IDEs ###
-# Ignore everything except shared code styles and run configurations
-.idea/*
-!.idea/codeStyles
-!.idea/runConfigurations
-
-### Build tools ###
-cmake-build-*/
-*.iws
-*.iml
-*.ipr
-out/
-.idea_modules/
-
 ### OSX ###
 .DS_Store
-.AppleDouble
-.LSOverride
-Icon
 ._*
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-### VS Code ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-.history/
-.history
-*.vsix
-.ionide

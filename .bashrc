@@ -3,10 +3,11 @@
 # This file shouldn't have anything else in it, since I organize my bash settings into other files
 #  (see ~/.bash_profile , ~/.bash_env , etc)
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
+# Cargo (Rust)
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
-. "$HOME/.local/bin/env"
+# UV / local bin
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
 # VoiceMode shell completion
 if command -v voicemode >/dev/null 2>&1; then

@@ -29,7 +29,7 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-if which brew > /dev/null && [[ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]]; then
+if command -v brew > /dev/null && [[ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]]; then
     source "$(brew --prefix)/share/bash-completion/bash_completion";
 elif [[ -f /etc/bash_completion ]]; then
     source /etc/bash_completion;
@@ -54,9 +54,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari SystemUIServ
 [[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# SDKMan (must be at EoF)
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+# Cargo (Rust)
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
-. "$HOME/.cargo/env"
-
-. "$HOME/.local/bin/env"
+# UV / local bin
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"

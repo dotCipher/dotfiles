@@ -35,13 +35,13 @@ zoxide init fish | source
 [ -f $HOME/.config/fish/aliases.fish ]; and source $HOME/.config/fish/aliases.fish
 
 # Editor
-set -gx EDITOR /usr/bin/vim
+set -gx EDITOR vim
 
 # GoLang
 set -gx GOPATH $HOME/Workspace/Go
 set -gx GOROOT (brew --prefix golang)/libexec
-set -x PATH $PATH $GOROOT/bin
-set -x PATH $PATH $GOPATH/bin
+fish_add_path $GOROOT/bin
+fish_add_path $GOPATH/bin
 
 # AWS
 set -q AWS_DEFAULT_PROFILE; or set AWS_DEFAULT_PROFILE dev
@@ -60,9 +60,7 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
-export PATH="$HOME/.local/bin:$PATH"
+fish_add_path $HOME/.local/bin
 
-# OpenAI API Key - set in secrets.fish
-# export OPENAI_API_KEY='your-key-here'
 set -gx BUN_INSTALL "$HOME/.bun"
-set -gx PATH "$BUN_INSTALL/bin" $PATH
+fish_add_path $BUN_INSTALL/bin

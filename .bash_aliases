@@ -59,7 +59,7 @@ fi
 alias sudo='sudo '
 ## Shortcuts
 alias _='sudo'
-alias please='sudo !!'
+please() { sudo $(fc -ln -1); }
 
 
 # Networking
@@ -68,8 +68,8 @@ alias ipv4="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip="ipv4"
 alias localip="ipconfig getifaddr en0"
 ## View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 # Download Cert (ie. getcert google.com:443 > google.crt)
 function getcert() {
     openssl s_client -showcerts -connect $1 </dev/null 2>/dev/null|openssl x509 -outform PEM
@@ -84,7 +84,7 @@ alias grhh="git reset HEAD --hard"
 alias gco="git checkout"
 ## Generate gitignore files dynamically (ie: gi java,osx > .gitignore)
 function gi() {
-    curl -L -s https://www.gitignore.io/api/$@ ;
+    curl -L -s https://www.toptal.com/developers/gitignore/api/$@ ;
 }
 
 

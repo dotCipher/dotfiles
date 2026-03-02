@@ -4,15 +4,12 @@
 	signingkey = F26A1BB18388A51E
 [commit]
 	gpgsign = true
-#[gpg]
-#	program = gpg
-[url "git@github.com:"]
 [gpg]
 	program = gpg
 [pull]
 	rebase = false
 [core]
-    editor = vim
+	editor = vim
 	excludesFile = ~/.gitignore
 [push]
 	autoSetupRemote = true

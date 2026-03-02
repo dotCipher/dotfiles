@@ -8,7 +8,7 @@ alias gc "git commit"
 alias gcm "git commit -m"
 alias gco "git checkout"
 alias gp "git push"
-alias gpo "git push -u origin (git branch | grep \* | cut -d ' ' -f2)"
+alias gpo "git push -u origin (git branch --show-current)"
 alias grhh "git reset HEAD --hard"
 alias clone "git clone"
 
