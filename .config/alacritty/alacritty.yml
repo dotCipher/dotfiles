@@ -36,9 +36,10 @@ window:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
+  # Reduced padding for better rendering performance
   padding:
-    x: 6
-    y: 6
+    x: 2
+    y: 2
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -88,7 +89,8 @@ scrolling:
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  #multiplier: 3
+  # Increased for better performance with rapid output
+  multiplier: 5
 
   # Scroll to the bottom when new text is written to the terminal.
   #auto_scroll: false
@@ -187,9 +189,13 @@ font:
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
+  # Reduced offsets for better rendering performance
   offset:
-    x: 1
-    y: 1
+    x: 0
+    y: 0
+
+  # Use built-in box drawing for better performance
+  builtin_box_drawing: true
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
@@ -292,7 +298,7 @@ colors:
   #save_to_clipboard: false
 
 # Allow terminal applications to change Alacritty's window title.
-#dynamic_title: true
+dynamic_title: true
 
 #cursor:
   # Cursor style

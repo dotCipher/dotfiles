@@ -1,6 +1,6 @@
 **/secrets.fish
 
-# Ignore specific .gnupg sub-dirs
+# Ignore specific .gnupg sub-dirs and runtime files
 .gnupg/crls.d/
 .gnupg/openpgp-revocs.d/
 .gnupg/private-keys-v1.d/
@@ -8,6 +8,8 @@
 .gnupg/pubring*
 .gnupg/reader_0.status
 .gnupg/trustdb.gpg
+.gnupg/tofu.db
+.gnupg/.#lk*
 
 # Ignore yarn
 .config/yarn/
@@ -17,6 +19,31 @@
 
 # Ignore diesel_cli
 .config/diesel_cli/
+
+# Ignore runtime / auto-generated config dirs
+.config/cagent/
+.config/configstore/
+.config/opencode/
+.config/uv/
+.config/wandb/
+.config/sprael/
+
+# Ignore configs containing secrets or auth tokens
+.config/vastai/
+.config/rclone/
+.config/mcp.json
+.config/claude-code/
+.config/gh/hosts.yml
+.config/github-copilot/apps.json
+.config/github-copilot/agent/
+.config/github-copilot/rr/
+
+# Ignore Zed backup files
+.config/zed/settings_backup.json
+.config/zed/settings.json.backup
+
+# Ignore proxy credentials
+.config/fish/socks-proxy-config
 
 # Created by https://www.toptal.com/developers/gitignore/api/osx,visualstudiocode,goland,intellij+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=osx,visualstudiocode,goland,intellij+all
