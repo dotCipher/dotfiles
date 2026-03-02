@@ -16,7 +16,7 @@ function git-prune-all --description="Delete all fully merged local and remote b
     end
 
     #  Make sure we're on master first
-    git checkout master > /dev/null ^&1
+    git checkout master > /dev/null 2>&1
 
     # Make sure we're working with the most up-to-date version of master.
     git fetch

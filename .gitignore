@@ -29,6 +29,7 @@
 .config/sprael/
 
 # Ignore configs containing secrets or auth tokens
+.config/auth0/
 .config/vastai/
 .config/rclone/
 .config/mcp.json
@@ -42,8 +43,22 @@
 .config/zed/settings_backup.json
 .config/zed/settings.json.backup
 
-# Ignore proxy credentials
+# Ignore work-specific proxy tools and completions
 .config/fish/socks-proxy-config
+.config/fish/PROXY-README.md
+.config/fish/completions/apollo-cli.fish
+.config/fish/completions/fedstart-cli.fish
+.config/fish/conf.d/socks-proxy.fish
+.config/fish/functions/build-workflow-docker-and-scan.fish
+.config/fish/functions/proxy-disable.fish
+.config/fish/functions/proxy-enable.fish
+.config/fish/functions/proxy-setup.fish
+.config/fish/functions/proxy-status.fish
+.config/fish/functions/proxy-test.fish
+.config/fish/functions/proxycurl.fish
+
+# Ignore Zed custom prompts (personal / volatile)
+.config/zed/prompts/
 
 # Created by https://www.toptal.com/developers/gitignore/api/osx,visualstudiocode,goland,intellij+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=osx,visualstudiocode,goland,intellij+all

@@ -70,16 +70,12 @@ alias localip="ipconfig getifaddr en0"
 ## View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-# One of @janmoesen’s ProTip™s
-for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-    alias "$method"="lwp-request -m '$method'"
-done
 # Download Cert (ie. getcert google.com:443 > google.crt)
 function getcert() {
     openssl s_client -showcerts -connect $1 </dev/null 2>/dev/null|openssl x509 -outform PEM
 }
 ## URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urlencode='python3 -c "import sys, urllib.parse; print(urllib.parse.quote_plus(sys.argv[1]))"'
 
 
 # Git
@@ -93,19 +89,7 @@ function gi() {
 
 
 # Code / Development
-alias idea="open *.ipr"
-## Gradlew
 alias gw='./gradlew'
-alias gwcc='./gradlew clean check'
-alias gwccp='./gradlew clean check --parallel'
-alias gwb='./gradlew build'
-alias gwbp='./gradlew build --parallel'
-alias gwi='./gradlew cleanIdea idea'
-alias gwidea='./gradlew cleanIdea idea && sleep 1 && open *.ipr'
-## JavaScriptCore REPL
-jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc";
-[ -e "${jscbin}" ] && alias jsc="${jscbin}";
-unset jscbin;
 
 # Time / Date
 ## Get week number
@@ -116,7 +100,7 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 
 # Housecleaning
 ## Update all the things!
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g;'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup;'
 ## Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 ## Clean up LaunchServices to remove duplicates in the “Open With” menu
@@ -164,9 +148,6 @@ command -v hd > /dev/null || alias hd="hexdump -C"
 command -v md5sum > /dev/null || alias md5sum="md5"
 ## OS X has no `sha1sum`, so use `shasum` as a fallback
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
-## Merge PDF files
-## Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 ## Intuitive map function
 ## For example, to list all directories that contain a certain file:
 ## find . -name .gitattributes | map dirname
