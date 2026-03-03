@@ -1,4 +1,4 @@
-# Alacritty configuration (TOML format, required since v0.13+)
+# Alacritty configuration (v0.16+)
 
 [env]
 TERM = "xterm-256color"
@@ -89,6 +89,6 @@ color = "#839496"
 index = 21
 color = "#eee8d5"
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/fish"
 args = ["--login"]
