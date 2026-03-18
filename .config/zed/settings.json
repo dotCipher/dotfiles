@@ -9,7 +9,7 @@
   "edit_predictions": {
     "provider": "copilot"
   },
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": "Zed (Default)",
   "context_servers": {
     "github": {
       "enabled": true,
@@ -20,11 +20,9 @@
       },
     },
     "mcp-server-linear": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
-      "env": {
-        "LINEAR_API_KEY": "$LINEAR_API_KEY",
-      },
+      "enabled": true,
+      "remote": false,
+      "settings": {}
     },
   },
   "agent": {
@@ -64,6 +62,6 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark Pro",
+    "dark": "One Dark"
   },
 }

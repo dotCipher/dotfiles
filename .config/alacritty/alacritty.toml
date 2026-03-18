@@ -1,12 +1,13 @@
 # Alacritty configuration (v0.16+)
 
 [env]
-TERM = "xterm-256color"
+TERM = "tmux-256color"
 
 [window]
 opacity = 0.95
 title = "Alacritty"
 dynamic_title = true
+decorations = "Buttonless"
 
 [window.padding]
 x = 8

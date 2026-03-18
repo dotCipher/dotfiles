@@ -67,3 +67,11 @@ end
 # ── Aliases & Abbreviations ───────────────────────────────────────────────────
 [ -f $HOME/.config/fish/aliases.fish ]; and source $HOME/.config/fish/aliases.fish
 [ -f $HOME/.config/fish/abbr.fish ];    and source $HOME/.config/fish/abbr.fish
+
+# ── Tmux smart window rename ──────────────────────────────────────────────────
+# Fires on every prompt to keep window name meaningful
+if set -q TMUX
+    function __tmux_rename --on-event fish_prompt
+        tmux-rename 2>/dev/null
+    end
+end
