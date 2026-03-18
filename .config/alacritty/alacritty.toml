@@ -9,11 +9,11 @@ title = "Alacritty"
 dynamic_title = true
 
 [window.padding]
-x = 2
-y = 2
+x = 8
+y = 8
 
 [scrolling]
-history = 5000
+history = 10000
 multiplier = 5
 
 [font]
@@ -36,58 +36,72 @@ style = "Italic"
 family = "Hack Nerd Font"
 style = "Bold Italic"
 
-# Solarized Dark
+# Catppuccin Mocha
 [colors.primary]
-background = "#002b36"
-foreground = "#93a1a1"
+background = "#1e1e2e"
+foreground = "#cdd6f4"
 
 [colors.cursor]
-text = "#002b36"
-cursor = "#93a1a1"
+text = "#1e1e2e"
+cursor = "#f5e0dc"
+
+[colors.vi_mode_cursor]
+text = "#1e1e2e"
+cursor = "#b4befe"
+
+[colors.search.matches]
+foreground = "#1e1e2e"
+background = "#a6adc8"
+
+[colors.search.focused_match]
+foreground = "#1e1e2e"
+background = "#a6e3a1"
+
+[colors.footer_bar]
+foreground = "#1e1e2e"
+background = "#a6adc8"
+
+[colors.hints.start]
+foreground = "#1e1e2e"
+background = "#f9e2af"
+
+[colors.hints.end]
+foreground = "#1e1e2e"
+background = "#a6adc8"
+
+[colors.selection]
+text = "#1e1e2e"
+background = "#f5e0dc"
 
 [colors.normal]
-black = "#002b36"
-red = "#dc322f"
-green = "#859900"
-yellow = "#b58900"
-blue = "#268bd2"
-magenta = "#6c71c4"
-cyan = "#2aa198"
-white = "#93a1a1"
+black   = "#45475a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
 
 [colors.bright]
-black = "#657b83"
-red = "#dc322f"
-green = "#859900"
-yellow = "#b58900"
-blue = "#268bd2"
-magenta = "#6c71c4"
-cyan = "#2aa198"
-white = "#fdf6e3"
+black   = "#585b70"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#a6adc8"
 
-[[colors.indexed_colors]]
-index = 16
-color = "#cb4b16"
-
-[[colors.indexed_colors]]
-index = 17
-color = "#d33682"
-
-[[colors.indexed_colors]]
-index = 18
-color = "#073642"
-
-[[colors.indexed_colors]]
-index = 19
-color = "#586e75"
-
-[[colors.indexed_colors]]
-index = 20
-color = "#839496"
-
-[[colors.indexed_colors]]
-index = 21
-color = "#eee8d5"
+[colors.dim]
+black   = "#45475a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
 
 [terminal.shell]
 program = "/opt/homebrew/bin/fish"

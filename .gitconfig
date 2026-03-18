@@ -11,6 +11,20 @@
 [core]
 	editor = vim
 	excludesFile = ~/.gitignore
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	light = false
+	side-by-side = true
+	line-numbers = true
+	syntax-theme = Catppuccin-mocha
+
+[diff]
+	colorMoved = default
 [push]
 	autoSetupRemote = true
 	default = current
