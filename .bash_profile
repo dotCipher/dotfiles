@@ -4,6 +4,9 @@ if [[ -f ~/.secure_bash_env ]]; then
 	source ~/.secure_bash_env;
 fi;
 
+# Secrets (never committed - transfer manually between machines)
+[ -f "$HOME/.secrets.env" ] && set -a && . "$HOME/.secrets.env" && set +a
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
