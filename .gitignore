@@ -1,4 +1,5 @@
 **/secrets.fish
+.secrets.env
 
 # Ignore specific .gnupg sub-dirs and runtime files
 .gnupg/crls.d/
