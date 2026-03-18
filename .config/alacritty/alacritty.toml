@@ -103,6 +103,13 @@ magenta = "#f5c2e7"
 cyan    = "#94e2d5"
 white   = "#bac2de"
 
+[cursor]
+# Beam while typing, switches to block in vi mode (set via shell)
+style = { shape = "Beam", blinking = "On" }
+blink_interval = 500
+blink_timeout = 10
+unfocused_hollow = true
+
 [terminal.shell]
 program = "/opt/homebrew/bin/fish"
 args = ["--login"]

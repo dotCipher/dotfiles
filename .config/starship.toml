@@ -9,6 +9,7 @@ $hostname\
 $directory\
 $git_branch\
 $git_status\
+$git_metrics\
 $git_state\
 $terraform\
 $kubernetes\
@@ -95,8 +96,6 @@ disabled = false
 format = '[󱃾 $context\($namespace\)]($style) '
 style = "bold cyan"
 disabled = false
-detect_files = ["*.yaml", "*.yml", "Dockerfile", "docker-compose.yml", "helmfile.yaml"]
-detect_folders = ["k8s", "kubernetes", "helm", "charts"]
 
 [kubernetes.context_aliases]
 "arn:aws:eks:.*:.*:cluster/(.*)" = "$1"
@@ -157,10 +156,16 @@ symbol = "󰏗 "
 style = "bold 208"
 disabled = true
 
+[git_metrics]
+format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
+added_style = "bold green"
+deleted_style = "bold red"
+disabled = false
+
 [cmd_duration]
 format = "[ $duration]($style)"
 style = "bold yellow"
-min_time = 2000
+min_time = 1000
 show_milliseconds = false
 
 [jobs]

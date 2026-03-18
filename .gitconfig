@@ -1,11 +1,11 @@
 [user]
 	email = cody.moore101@gmail.com
 	name = Cody Moore
-	signingkey = F26A1BB18388A51E
+	signingkey = D2C55D09CBE8CD59
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg
+	program = /opt/homebrew/bin/gpg
 [pull]
 	rebase = false
 [core]

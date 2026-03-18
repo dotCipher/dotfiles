@@ -8,7 +8,7 @@ set -gx EDITOR vim
 
 # ── GoLang ───────────────────────────────────────────────────────────────────
 set -gx GOPATH $HOME/Workspace/Go
-set -gx GOROOT (brew --prefix golang)/libexec
+set -gx GOROOT /opt/homebrew/opt/go/libexec
 fish_add_path $GOROOT/bin
 fish_add_path $GOPATH/bin
 
@@ -64,5 +64,6 @@ end
 [ -f $HOME/.config/fish/secrets.fish ]; and source $HOME/.config/fish/secrets.fish
 [ -f $HOME/.config/fish/secure_env.fish ]; and source $HOME/.config/fish/secure_env.fish
 
-# ── Aliases ───────────────────────────────────────────────────────────────────
+# ── Aliases & Abbreviations ───────────────────────────────────────────────────
 [ -f $HOME/.config/fish/aliases.fish ]; and source $HOME/.config/fish/aliases.fish
+[ -f $HOME/.config/fish/abbr.fish ];    and source $HOME/.config/fish/abbr.fish
