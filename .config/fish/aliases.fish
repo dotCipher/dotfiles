@@ -22,3 +22,6 @@ alias py     "python3"
 alias lg     "lazygit"
 
 alias docker-nuke "docker stop (docker ps -a -q) 2>/dev/null; docker rm (docker ps -a -q) 2>/dev/null; docker system prune -f"
+
+# ── Reference ─────────────────────────────────────────────────────────────────
+alias cheat "bat --style=plain --paging=always ~/Workspace/personal/dotfiles/CHEATSHEET.md"
