@@ -9,8 +9,11 @@ alias lt "eza --icons --tree --level=2"
 alias lta "eza --icons --tree --level=3"
 
 # ── File viewing (bat) ────────────────────────────────────────────────────────
-alias cat "bat --style=plain"
-alias catp "bat --style=full --paging=always"
+# bat config (~/.config/bat/config) sets: no pager, plain style, Catppuccin Mocha theme.
+# `cat` is a clean drop-in: syntax-highlighted, copy-pasteable, no decorations.
+# `batp` enables the full reading experience with pager + decorations.
+alias cat "bat"
+alias batp "bat --style=full --paging=always"
 
 # ── Search (ripgrep + fd) ─────────────────────────────────────────────────────
 alias rg "rg --smart-case"

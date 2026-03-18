@@ -1,0 +1,20 @@
+# bat configuration
+# https://github.com/sharkdp/bat#configuration-file
+
+# Theme — matches Alacritty + Starship
+--theme="Catppuccin Mocha"
+
+# Never use the pager by default; let the shell handle scrolling.
+# Use `bat --paging=always` or `batp` alias when you want to page.
+--paging=never
+
+# Plain output by default: no line numbers, no file header, no grid.
+# This makes bat a true drop-in for cat — output is clean and copy-pasteable.
+# Use `batp` alias for the full decorated reading experience.
+--style=plain
+
+# Always show color even when piping (useful for rg/fzf previews).
+--color=always
+
+# Wrap long lines rather than truncate.
+--wrap=auto
