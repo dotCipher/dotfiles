@@ -28,13 +28,13 @@
 
 # Ignore auto-generated / volatile config files
 .config/fish/fish_variables
-.config/jgit/
 .config/github-copilot/versions.json
 
 # Ignore configs containing secrets or auth tokens
 .config/auth0/
 .config/vastai/
 .config/rclone/
+.config/gcloud/
 .config/mcp.json
 .config/claude-code/
 .config/gh/hosts.yml
@@ -60,6 +60,9 @@
 .config/fish/functions/proxy-status.fish
 .config/fish/functions/proxy-test.fish
 .config/fish/functions/proxycurl.fish
+
+### Generated / backup files ###
+*.bak
 
 ### OSX ###
 .DS_Store

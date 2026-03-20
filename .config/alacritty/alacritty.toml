@@ -114,3 +114,8 @@ unfocused_hollow = true
 [terminal.shell]
 program = "/opt/homebrew/bin/fish"
 args = ["--login"]
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"

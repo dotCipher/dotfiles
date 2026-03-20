@@ -68,7 +68,6 @@ alias ipv4="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip="ipv4"
 alias localip="ipconfig getifaddr en0"
 ## View HTTP traffic
-alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 # Download Cert (ie. getcert google.com:443 > google.crt)
 function getcert() {
@@ -87,9 +86,6 @@ function gi() {
     curl -L -s https://www.toptal.com/developers/gitignore/api/$@ ;
 }
 
-
-# Code / Development
-alias gw='./gradlew'
 
 # Time / Date
 ## Get week number

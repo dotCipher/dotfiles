@@ -9,7 +9,7 @@
   "edit_predictions": {
     "provider": "copilot"
   },
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "Catppuccin Mocha",
   "context_servers": {
     "github": {
       "enabled": true,
@@ -26,23 +26,13 @@
     },
   },
   "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "write",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6-1m-context-latest",
+      "enable_thinking": false
     },
-    "providers": {
-      "copilot": {
-        "kind": "copilot",
-      },
-      "openrouter": {
-        "kind": "openai",
-        "api_url": "https://openrouter.ai/api/v1",
-        "api_key": "env:OPENROUTER_API_KEY",
-      },
-    },
-    "model_parameters": [],
+    "favorite_models": [],
+    "model_parameters": []
   },
   "agent_servers": {
     "opencode": {
@@ -60,8 +50,8 @@
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
+    "mode": "dark",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
   },
 }

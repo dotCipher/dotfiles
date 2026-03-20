@@ -14,9 +14,14 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " List all vim plugins (ie https://vimawesome.com/)
-Plug 'altercation/vim-colors-solarized'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'sheerun/vim-polyglot'
 
 " Initialize the plugin system
 call plug#end()
+
+" ── Theme ────────────────────────────────────────────────────────────────────
+set termguicolors
+set background=dark
+silent! colorscheme catppuccin_mocha
 

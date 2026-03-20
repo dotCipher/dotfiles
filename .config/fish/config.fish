@@ -7,18 +7,10 @@ fish_add_path $HOME/bin
 set -gx EDITOR vim
 
 # ── GoLang ───────────────────────────────────────────────────────────────────
-set -gx GOPATH $HOME/Workspace/Go
+set -gx GOPATH $HOME/go
 set -gx GOROOT /opt/homebrew/opt/go/libexec
 fish_add_path $GOROOT/bin
 fish_add_path $GOPATH/bin
-
-# ── pnpm ─────────────────────────────────────────────────────────────────────
-set -gx PNPM_HOME "$HOME/Library/pnpm"
-fish_add_path $PNPM_HOME
-
-# ── Bun ──────────────────────────────────────────────────────────────────────
-set -gx BUN_INSTALL "$HOME/.bun"
-fish_add_path $BUN_INSTALL/bin
 
 # ── GPG ──────────────────────────────────────────────────────────────────────
 set -gx GPG_TTY (tty)
